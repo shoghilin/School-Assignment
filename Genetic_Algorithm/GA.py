@@ -127,17 +127,17 @@ class GA():
 
 if __name__ == '__main__':
     # p_m differ experiment
-    # for p_m in np.arange(0, 1.1, 0.1):
-    #   print(f"\nSete p_m = {p_m}")
-    #   ga = GA(p_m=p_m)
-    #   ga.run(repeat=30, show_result=False)
-    #   ga.plot(label=f'p_m={p_m}')
-    #   if p_m == 0.5:
-    #     plt.legend()
-    #     plt.show()
+    for p_m in np.arange(0, 1.1, 0.1):
+      print(f"\nSete p_m = {p_m}")
+      ga = GA(p_m=p_m)
+      ga.run(repeat=30, show_result=False)
+      ga.plot(label=f'p_m={p_m}')
+      if p_m == 0.5:
+        plt.legend()
+        plt.show()
 
-    # plt.legend()
-    # plt.show()
+    plt.legend()
+    plt.show()
     
     # p_c differ experiment
     p_cs = np.round(np.arange(0.1, 1.01, 0.05) * 100) / 100
